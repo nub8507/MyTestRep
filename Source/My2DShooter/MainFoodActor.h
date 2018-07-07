@@ -4,7 +4,6 @@
 
 
 #include "EngineMinimal.h"
-#include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MainFoodActor.generated.h"
 

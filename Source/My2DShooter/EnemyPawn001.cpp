@@ -43,14 +43,14 @@ void AEnemyPawn001::ExecMove(float DeltaTime)
 	Super::ExecMove(DeltaTime);
 	//
 	FHitResult Hit(1.f);
-	FVector Movement = Speed.GetSafeNormal2D()*DeltaTime*20.f;
+	FVector Movement = Speed.GetSafeNormal2D()*DeltaTime*200.f;
 	RootComponent->MoveComponent(Movement, Movement.Rotation(),true,&Hit);
 
 	if (Hit.IsValidBlockingHit())
 	{
-		const AActor *HitActor = Hit.GetActor();
-		//
-		if (Cast<AMainPlayerProjectile>(HitActor) != nullptr)
+		const UObject *HitActor = Hit.GetActor();
+
+		if ((Cast<AMainPlayerProjectile>(HitActor) != nullptr) || HitActor == nullptr) 
 			return;
 		//
 		const FVector Normal2D = Hit.Normal.GetSafeNormal2D();
@@ -58,7 +58,6 @@ void AEnemyPawn001::ExecMove(float DeltaTime)
 		const FVector NewSpeed = -Speed + V1*2.f;
 		const FVector Deflection = FVector::VectorPlaneProject(Movement, Normal2D) * (1.f - Hit.Time);
 //		RootComponent->MoveComponent(Deflection, FRotator(0.f), true);
-//		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::White, FString::Printf(TEXT("DeltaMove: %f,  "), Speed.Size2D()) + "    " + Speed.ToString() + "    " + NewSpeed.ToString());
 		this->Speed = NewSpeed.GetSafeNormal2D();
 	}
 }

@@ -38,7 +38,6 @@ void UDoActorsHit::ExecPlayerMinePawnHit(AActor* Source, AActor* Dest, int DestT
 void UDoActorsHit::ExecPlayerFoodPawnHit(AActor* Source, AActor* Dest, int DestType) {
 	//
 	APlayerController* const MyPlayer = Cast<APlayerController>(GEngine->GetFirstLocalPlayerController(Source->GetWorld()));
-	Dest->Destroy();
 	//
 	AMainLevelScriptActor *Level = Cast<AMainLevelScriptActor>(MyPlayer->GetLevel()->GetLevelScriptActor());
 	for (int i = 0; i < Level->LevelClass->FoodList.Num(); i++)
@@ -49,6 +48,7 @@ void UDoActorsHit::ExecPlayerFoodPawnHit(AActor* Source, AActor* Dest, int DestT
 		}
 	}
 	//
+	Dest->Destroy();
 }
 
 void UDoActorsHit::ExecPlayerEnemyPawnHit(AActor* Source, AActor* Dest, int DestType) {

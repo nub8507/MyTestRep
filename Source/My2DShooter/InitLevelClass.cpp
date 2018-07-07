@@ -31,17 +31,17 @@ void AInitLevelClass::BeginPlay()
 {
 	Super::BeginPlay();
 
-	this->InitLevelData();
-
+	this->FoodList.Empty();
+	this->MineList.Empty();
+	this->InitEnemyList.Empty();
+	this->EnemyList.Empty();
+	//
 	Level = Cast<AMainLevelScriptActor>(GetLevel()->GetLevelScriptActor());
 	Level->LevelClass = this;
 	//
-	this->FoodList.Reset(0);
-	this->MineList.Reset(0);
-	this->InitEnemyList.Reset(0);
-	this->EnemyList.Reset(0);
-	//
 	this->LevelWidget = nullptr;
+	//
+	this->InitLevelData();
 	//
 }
 

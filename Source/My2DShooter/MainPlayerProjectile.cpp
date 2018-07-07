@@ -3,6 +3,7 @@
 //#include "My2DShooter.h"
 #include "MainPlayerProjectile.h"
 
+#include "DoActorsHit.h"
 
 // Sets default values
 AMainPlayerProjectile::AMainPlayerProjectile()

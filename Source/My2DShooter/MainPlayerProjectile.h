@@ -8,7 +8,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "DoActorsHit.h"
 #include "MainPlayerProjectile.generated.h"
 
 UCLASS(Blueprintable)
