@@ -24,6 +24,9 @@ TSubclassOf<class UObject> AMainLevelScriptActor::FindOrLoadBluePrintClass(const
 {
 
 	UObject* something = StaticLoadObject(UObject::StaticClass(), nullptr, path);
+
+	if (something == nullptr) return nullptr;
+
 	UBlueprint* bp = Cast<UBlueprint>(something);
 	TSubclassOf<class UObject> MyItemBlueprint;
 	MyItemBlueprint = (UClass*)bp->GeneratedClass;

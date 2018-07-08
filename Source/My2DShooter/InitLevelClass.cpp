@@ -99,6 +99,14 @@ bool AInitLevelClass::InitEat()
 	const TCHAR* T = *(this->FoodActorName);
 	aFoodActor = AMainLevelScriptActor::FindOrLoadBluePrintClass(T);
 
+//	FStringAssetReference itemRef = "Blueprint'/Game/TwinStick/Actors/BP_EnemySpawnActor.BP_EnemySpawnActor'";
+//	UObject* Test = itemRef.TryLoad();
+
+	FStringAssetReference itemRef = FStringAssetReference(this);
+
+	//	GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::White, itemRef.GetAssetPathString());
+	UE_LOG(LogTemp, Error, TEXT("%s"),*(itemRef.GetAssetPathString()));
+
 	if (aFoodActor == nullptr) return true;
 	//
 	for (int i = 0; i < this->EatCount; i++)
@@ -107,6 +115,7 @@ bool AInitLevelClass::InitEat()
 		NewActor = World->SpawnActor<AMainFoodActor>(aFoodActor.Get(), NewPos, NewPos.Rotation());
 //		NewActor->SetActorScale3D(FVector(2.f, 2.f, 2.f));
 		NewActor->InitRotation = GetRandomRot(FRotator(-50, -50, -50), FRotator(50, 50, 50));
+
 		this->FoodList.Add(NewActor);
 	}
 	return true;
@@ -146,7 +155,7 @@ bool AInitLevelClass::InitEnemyGate()
 	//
 	NewPos = GetRandomPos(this->MinLevelSize,this->MaxLevelSize);
 	TSubclassOf<class AEnemySpawnActor> aEnemySpawnActor;
-	aEnemySpawnActor = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("/Game/TwinStick/Actors/BP_EnemySpawnActor"));
+	aEnemySpawnActor = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Actors/BP_EnemySpawnActor.BP_EnemySpawnActor'"));
 	if (aEnemySpawnActor == nullptr) return true;
 
 	NewActor = World->SpawnActor<AEnemySpawnActor>(aEnemySpawnActor.Get(), NewPos, NewPos.Rotation());
@@ -162,7 +171,7 @@ bool AInitLevelClass::InitLevelMenu()
 	APlayerController* MyPlayer = (APlayerController*)GetWorld()->GetFirstPlayerController();
 	TSubclassOf<class UUserWidget> wLevelMenu;
 	//
-	wLevelMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("/Game/TwinStick/Wigets/LevelInterface"));
+	wLevelMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Class'/Game/TwinStick/Wigets/LevelInterface.LevelInterface'"));
 	UMainLevelWidget* UW = CreateWidget<UMainLevelWidget>(MyPlayer, wLevelMenu);
 	if (UW)
 	{
@@ -172,7 +181,7 @@ bool AInitLevelClass::InitLevelMenu()
 		return true;
 	}
 	//
-	return false;
+	return true;
 }
 
 FVector AInitLevelClass::GetRandomPos(FVector Min,FVector Max)
