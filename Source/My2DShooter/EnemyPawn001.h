@@ -33,7 +33,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
-	UFUNCTION(BlueprintCallable)
+//	UFUNCTION(BlueprintCallable)
 	virtual void ExecMove(float DeltaTime) override;
 
 	virtual void GetDamage(float Damage) override;

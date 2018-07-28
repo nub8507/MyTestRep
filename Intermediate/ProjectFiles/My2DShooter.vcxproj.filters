@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\My2DShooter.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{2F2C1470-9C58-40DC-A79A-53838FCF0177}</UniqueIdentifier>
+			<UniqueIdentifier>{9180E6B5-7826-4481-A980-8A64504BF895}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\My2DShooter.Target.cs">
 			<Filter>Source</Filter>
@@ -13,8 +13,11 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{99E5EA3A-3FCB-412C-A48A-E2A7A11E1CBE}</UniqueIdentifier>
+			<UniqueIdentifier>{8A01E7B8-613B-4579-BE3D-EE9AF54295C6}</UniqueIdentifier>
 		</Filter>
+		<None Include="..\..\Config\DefaultCrypto.ini">
+			<Filter>Config</Filter>
+		</None >
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
 		</None >
@@ -31,7 +34,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\My2DShooter">
-			<UniqueIdentifier>{625E995C-33E3-46CB-982E-C7BB6650E4CD}</UniqueIdentifier>
+			<UniqueIdentifier>{C7519F73-6863-4310-8B2F-E3E9E5934201}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\My2DShooter\DoActorsHit.cpp">
 			<Filter>Source\My2DShooter</Filter>
@@ -160,12 +163,6 @@
 			<Filter>Source\My2DShooter</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\My2DShooter\My2DShooterGameMode.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MyClass.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MyClass.h">
 			<Filter>Source\My2DShooter</Filter>
 		</ClInclude >
 		<ClInclude Include="..\..\Source\My2DShooter\Struct.h">

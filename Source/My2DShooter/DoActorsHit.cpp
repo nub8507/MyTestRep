@@ -113,7 +113,7 @@ void UDoActorsHit::ExecPlayerWallPawnHit(AActor* Source, AActor* Dest, int DestT
 		Mode.SetHideCursorDuringCapture(true);
 		MyPlayer->SetInputMode(Mode);
 		MyPlayer->bShowMouseCursor = true;
-		MyPlayer->SetPause(true);
+//		MyPlayer->SetPause(true);
 	}
 	//
 	Source->Destroy();
