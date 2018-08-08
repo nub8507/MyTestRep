@@ -99,13 +99,7 @@ bool AInitLevelClass::InitEat()
 	const TCHAR* T = *(this->FoodActorName);
 	aFoodActor = AMainLevelScriptActor::FindOrLoadBluePrintClass(T);
 
-//	FStringAssetReference itemRef = "Blueprint'/Game/TwinStick/Actors/BP_EnemySpawnActor.BP_EnemySpawnActor'";
-//	UObject* Test = itemRef.TryLoad();
-
-	FStringAssetReference itemRef = FStringAssetReference(this);
-
 	//	GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::White, itemRef.GetAssetPathString());
-	UE_LOG(LogTemp, Error, TEXT("%s"),*(itemRef.GetAssetPathString()));
 
 	if (aFoodActor == nullptr) return true;
 	//
@@ -113,7 +107,6 @@ bool AInitLevelClass::InitEat()
 	{
 		NewPos = GetRandomPos(this->MinLevelSize, this->MaxLevelSize);
 		NewActor = World->SpawnActor<AMainFoodActor>(aFoodActor.Get(), NewPos, NewPos.Rotation());
-//		NewActor->SetActorScale3D(FVector(2.f, 2.f, 2.f));
 		NewActor->InitRotation = GetRandomRot(FRotator(-50, -50, -50), FRotator(50, 50, 50));
 
 		this->FoodList.Add(NewActor);
@@ -155,7 +148,7 @@ bool AInitLevelClass::InitEnemyGate()
 	//
 	NewPos = GetRandomPos(this->MinLevelSize,this->MaxLevelSize);
 	TSubclassOf<class AEnemySpawnActor> aEnemySpawnActor;
-	aEnemySpawnActor = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Actors/BP_EnemySpawnActor.BP_EnemySpawnActor'"));
+	aEnemySpawnActor = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Actors/BP_EnemySpawnActor.BP_EnemySpawnActor_C'"));
 	if (aEnemySpawnActor == nullptr) return true;
 
 	NewActor = World->SpawnActor<AEnemySpawnActor>(aEnemySpawnActor.Get(), NewPos, NewPos.Rotation());
@@ -171,7 +164,7 @@ bool AInitLevelClass::InitLevelMenu()
 	APlayerController* MyPlayer = (APlayerController*)GetWorld()->GetFirstPlayerController();
 	TSubclassOf<class UUserWidget> wLevelMenu;
 	//
-	wLevelMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Class'/Game/TwinStick/Wigets/LevelInterface.LevelInterface'"));
+	wLevelMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Wigets/LevelInterface.LevelInterface_C'"));
 	UMainLevelWidget* UW = CreateWidget<UMainLevelWidget>(MyPlayer, wLevelMenu);
 	if (UW)
 	{
@@ -202,17 +195,6 @@ FRotator AInitLevelClass::GetRandomRot(FRotator Min, FRotator Max)
 	return FRotator(Pitch, Yaw, Roll);
 }
 
-/*TSubclassOf<class UObject> AInitLevelClass::FindOrLoadBluePrintClass(const TCHAR* path)
-{
-
-	UObject* something = StaticLoadObject(UObject::StaticClass(), nullptr, path);
-	UBlueprint* bp = Cast<UBlueprint>(something);
-	if (bp == nullptr) return nullptr;
-	TSubclassOf<class UObject> MyItemBlueprint;
-	MyItemBlueprint = CastChecked<UClass>(bp->GeneratedClass);
-
-	return MyItemBlueprint;
-}*/
 
 void AInitLevelClass::CopyEnemyList()
 {

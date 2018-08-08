@@ -64,7 +64,6 @@ private:
 
 	void ExecMove(float DeltaTime);
 
-	TSubclassOf<class UObject> FindOrLoadBluePrintClass(const TCHAR * path);
 
 protected:
 	// Called when the game starts or when spawned

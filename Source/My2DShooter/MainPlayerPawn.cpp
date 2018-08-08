@@ -99,7 +99,7 @@ void AMainPlayerPawn::FireShot(FVector FireDirection, float FireSpeed)
 				// spawn the projectile
 				TSubclassOf<class AMainPlayerProjectile> aPlayerProjectile;
 				const TCHAR* T = *(this->PlayerProjectileName);
-				aPlayerProjectile = FindOrLoadBluePrintClass(T);
+				aPlayerProjectile = AMainLevelScriptActor::FindOrLoadBluePrintClass(T);
 				AMainPlayerProjectile* Proj;
 				Proj = World->SpawnActor<AMainPlayerProjectile>(aPlayerProjectile.Get(), SpawnLocation, FireRotation);
 				Proj->InitSpeed(FireSpeed);
@@ -166,16 +166,6 @@ void AMainPlayerPawn::ExecMove(float DeltaTime)
 	//
 }
 
-TSubclassOf<class UObject> AMainPlayerPawn::FindOrLoadBluePrintClass(const TCHAR* path)
-{
-
-	UObject* something = StaticLoadObject(UObject::StaticClass(), nullptr, path);
-	UBlueprint* bp = Cast<UBlueprint>(something);
-	TSubclassOf<class UObject> MyItemBlueprint;
-	MyItemBlueprint = (UClass*)bp->GeneratedClass;
-
-	return MyItemBlueprint;
-}
 
 void AMainPlayerPawn::MenuActionPress()
 {

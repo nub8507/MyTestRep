@@ -19,7 +19,7 @@ void UDoActorsHit::ExecPlayerMinePawnHit(AActor* Source, AActor* Dest, int DestT
 	APlayerController* const MyPlayer = Cast<APlayerController>(GEngine->GetFirstLocalPlayerController(Source->GetWorld()));
 	MyPlayer->SetPause(true);
 	TSubclassOf<class UUserWidget> wMainMenu;
-	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("/Game/TwinStick/Wigets/MainMenuWidget"));
+	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Wigets/MainMenuWidget.MainMenuWidget_C'"));
 	UMainMenuWidget* UW = CreateWidget<UMainMenuWidget>(MyPlayer, wMainMenu);
 	if (UW)
 	{
@@ -56,7 +56,7 @@ void UDoActorsHit::ExecPlayerEnemyPawnHit(AActor* Source, AActor* Dest, int Dest
 	APlayerController* const MyPlayer = Cast<APlayerController>(GEngine->GetFirstLocalPlayerController(Source->GetWorld()));
 	MyPlayer->SetPause(true);
 	TSubclassOf<class UUserWidget> wMainMenu;
-	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("/Game/TwinStick/Wigets/MainMenuWidget"));
+	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Wigets/MainMenuWidget.MainMenuWidget_C'"));
 	UMainMenuWidget* UW = CreateWidget<UMainMenuWidget>(MyPlayer, wMainMenu);
 	if (UW)
 	{
@@ -79,7 +79,7 @@ void UDoActorsHit::ExecPlayerEnemyProjectilePawnHit(AActor* Source, AActor* Dest
 	APlayerController* const MyPlayer = Cast<APlayerController>(GEngine->GetFirstLocalPlayerController(Source->GetWorld()));
 	MyPlayer->SetPause(true);
 	TSubclassOf<class UUserWidget> wMainMenu;
-	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("/Game/TwinStick/Wigets/MainMenuWidget"));
+	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Wigets/MainMenuWidget.MainMenuWidget_C'"));
 	UMainMenuWidget* UW = CreateWidget<UMainMenuWidget>(MyPlayer, wMainMenu);
 	if (UW)
 	{
@@ -102,7 +102,7 @@ void UDoActorsHit::ExecPlayerWallPawnHit(AActor* Source, AActor* Dest, int DestT
 	APlayerController* const MyPlayer = Cast<APlayerController>(GEngine->GetFirstLocalPlayerController(Source->GetWorld()));
 	MyPlayer->SetPause(true);
 	TSubclassOf<class UUserWidget> wMainMenu;
-	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("/Game/TwinStick/Wigets/MainMenuWidget"));
+	wMainMenu = AMainLevelScriptActor::FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Wigets/MainMenuWidget.MainMenuWidget_C'"));
 	UMainMenuWidget* UW = CreateWidget<UMainMenuWidget>(MyPlayer, wMainMenu);
 	if (UW)
 	{

@@ -65,7 +65,9 @@ int32 AEnemySpawnActor::FindNextEnemyToSpawn()
 void AEnemySpawnActor::CastNextEnemy(int32 EnemyNum)
 {
 	TSubclassOf<class UObject> aEnemySpawnActor;
-	aEnemySpawnActor = this->GetEnemyByNum(Level->LevelClass->InitEnemyList[EnemyNum].Type);
+	aEnemySpawnActor = Level->FindOrLoadBluePrintClass(*(Level->LevelClass->InitEnemyList[EnemyNum].EnemyActorName));//this->GetEnemyByNum(Level->LevelClass->InitEnemyList[EnemyNum].Type);
+	if (aEnemySpawnActor == nullptr)return;
+
 	AMainEnemyCharacter* NewActor = World->SpawnActor<AMainEnemyCharacter>(aEnemySpawnActor.Get(), this->GetActorLocation(), this->GetActorRotation());
 	Level->LevelClass->InitEnemyList[EnemyNum].Spawned = true;
 	Level->LevelClass->InitEnemyList[EnemyNum].EnemyCount--;
@@ -78,7 +80,7 @@ void AEnemySpawnActor::CastNextEnemy(int32 EnemyNum)
 TSubclassOf<class UObject> AEnemySpawnActor::GetEnemyByNum(int32 EnemyNum)
 {
 	if (EnemyNum==1) {
-		return Level->FindOrLoadBluePrintClass(TEXT("/Game/TwinStick/Actors/BP_EnemyPawn001"));
+		return Level->FindOrLoadBluePrintClass(TEXT("Blueprint'/Game/TwinStick/Actors/BP_EnemyPawn001.BP_EnemyPawn001_C'"));
 	}
 
 	return nullptr;

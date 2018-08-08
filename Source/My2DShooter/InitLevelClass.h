@@ -90,8 +90,6 @@ private:
 	
 	FRotator GetRandomRot(FRotator Min, FRotator Max);
 
-//	TSubclassOf<class UObject> FindOrLoadBluePrintClass(const TCHAR * path);
-
 	float GateDelay;
 	bool initEat;
 	bool initMine;
