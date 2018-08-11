@@ -153,6 +153,8 @@ bool AInitLevelClass::InitEnemyGate()
 
 	NewActor = World->SpawnActor<AEnemySpawnActor>(aEnemySpawnActor.Get(), NewPos, NewPos.Rotation());
 	//
+	if (NewActor == nullptr)return false;
+	//
 	CopyEnemyList();
 	//
 	return true;

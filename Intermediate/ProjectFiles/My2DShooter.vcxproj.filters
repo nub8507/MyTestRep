@@ -1,172 +1,187 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\My2DShooter.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{9180E6B5-7826-4481-A980-8A64504BF895}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\My2DShooter.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\My2DShooterEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{8A01E7B8-613B-4579-BE3D-EE9AF54295C6}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultCrypto.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\My2DShooter">
-			<UniqueIdentifier>{C7519F73-6863-4310-8B2F-E3E9E5934201}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\My2DShooter\DoActorsHit.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\DoActorsHit.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\EnemyPawn001.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\EnemyPawn001.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\EnemySpawnActor.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\EnemySpawnActor.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\FoodActor.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\FoodActor.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\InitLevelClass.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\InitLevelClass.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainEnemyCharacter.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainEnemyCharacter.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainEnemyProjectile.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainEnemyProjectile.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainFoodActor.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainFoodActor.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainHUD.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainHUD.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainLevelClass.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainLevelClass.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainLevelScriptActor.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainLevelScriptActor.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainLevelWidget.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainLevelWidget.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainMenuWidget.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainMenuWidget.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainMineActor.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainMineActor.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainPawn.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainPawn.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainPlayerPawn.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainPlayerPawn.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MainPlayerProjectile.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MainPlayerProjectile.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\MineActor.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\MineActor.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<None Include="..\..\Source\My2DShooter\My2DShooter.Build.cs">
-			<Filter>Source\My2DShooter</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\My2DShooter\My2DShooter.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\My2DShooter.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\My2DShooterGameInstance.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\My2DShooterGameInstance.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\My2DShooter\My2DShooterGameMode.cpp">
-			<Filter>Source\My2DShooter</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\My2DShooter\My2DShooterGameMode.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-		<ClInclude Include="..\..\Source\My2DShooter\Struct.h">
-			<Filter>Source\My2DShooter</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\My2DShooter.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{9180E6B5-7826-4481-A980-8A64504BF895}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\My2DShooter.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\My2DShooterEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{8A01E7B8-613B-4579-BE3D-EE9AF54295C6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultCrypto.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\My2DShooter">
+      <UniqueIdentifier>{C7519F73-6863-4310-8B2F-E3E9E5934201}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\My2DShooter\DoActorsHit.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\DoActorsHit.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\EnemyPawn001.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\EnemyPawn001.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\EnemySpawnActor.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\EnemySpawnActor.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\FoodActor.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\FoodActor.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\InitLevelClass.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\InitLevelClass.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainEnemyCharacter.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainEnemyCharacter.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainEnemyProjectile.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainEnemyProjectile.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainFoodActor.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainFoodActor.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainHUD.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainHUD.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainLevelClass.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainLevelClass.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainLevelScriptActor.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainLevelScriptActor.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainLevelWidget.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainLevelWidget.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainMenuWidget.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainMenuWidget.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainMineActor.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainMineActor.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainPawn.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainPawn.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainPlayerPawn.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainPlayerPawn.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MainPlayerProjectile.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MainPlayerProjectile.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\MineActor.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\MineActor.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\My2DShooter\My2DShooter.Build.cs">
+      <Filter>Source\My2DShooter</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\My2DShooter\My2DShooter.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\My2DShooter.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\My2DShooterGameInstance.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\My2DShooterGameInstance.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\My2DShooter\My2DShooterGameMode.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\My2DShooter\My2DShooterGameMode.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\My2DShooter\Struct.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\My2DShooter\StaticLogic.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\My2DShooter\MyClass.h">
+      <Filter>Source\My2DShooter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\My2DShooter\StaticLogic.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\My2DShooter\MyClass.cpp">
+      <Filter>Source\My2DShooter</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 #pragma once
-#include "Object.h"
+#include "EngineMinimal.h"
 #include "Struct.generated.h"
 /**
 *
@@ -27,4 +27,30 @@ public:
 		FString EnemyActorName;
 
 
+};
+
+
+USTRUCT(BlueprintType)
+struct FMyGameZonePart {
+
+	GENERATED_USTRUCT_BODY()
+
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MyGameZone")
+		FVector Min;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MyGameZone")
+		FVector Max;
+};
+
+USTRUCT(BlueprintType)
+struct FMyGameZone {
+
+	GENERATED_USTRUCT_BODY()
+
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MyGameZone")
+		TArray<FMyGameZonePart> Zones;
 };
